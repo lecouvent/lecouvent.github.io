@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .grid-demo {
+    grid-template-areas: "loctxt" "locpic" "saltxt" "salpic";
+    @media (min-width: 768px) {
+      grid-template-areas: "locpic loctxt" "saltxt salpic";
+    }
+  }
+
+  .bg-loc {
+    grid-area: locpic / loctxt;
+    grid-column-start: locpic;
+  }
+  .bg-sal {
+    grid-area: salpic / saltxt;
+    grid-column-end: salpic;
+  }
+}
