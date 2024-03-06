@@ -18,4 +18,36 @@
     grid-area: salpic / saltxt;
     grid-column-end: salpic;
   }
+
+  @keyframes anim-trans-1 {
+    0% {
+      transform: translateX(0%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes anim-trans-2 {
+    0% {
+      transform: translateX(100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  /* .anim-cover-1 {
+    animation: 2s linear infinite alternate anim-trans-1;
+  }
+
+  .anim-cover-2 {
+    animation: 2s linear infinite alternate anim-trans-2;
+  } */
 }
