@@ -14,6 +14,7 @@
     grid-area: locpic / loctxt;
     grid-column-start: locpic;
   }
+
   .bg-sal {
     grid-area: salpic / saltxt;
     grid-column-end: salpic;
@@ -28,6 +29,29 @@
     -webkit-text-stroke: 2px white;
   }
 
+  .carousel .container {
+    @apply absolute inset-0 w-full max-w-full transition-transform;
+  }
+
+  .carousel .carousel-nav {
+    @apply absolute top-1/2 -translate-y-1/2 bg-green-800 text-white size-10 flex items-center justify-center rounded-full transition-colors hover:bg-green-600;
+  }
+
+  .dots button {
+    @apply size-4 rounded-full bg-green-800;
+  }
+  .dots button.active {
+    @apply bg-green-600;
+  }
+
+  .carousel img {
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
   @media (min-width: 640px) {
     .title {
       -webkit-text-stroke: 3px white;
@@ -38,36 +62,4 @@
       -webkit-text-stroke: 4px white;
     }
   }
-
-  @keyframes anim-trans-1 {
-    0% {
-      transform: translateX(0%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  @keyframes anim-trans-2 {
-    0% {
-      transform: translateX(100%);
-    }
-    50% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
-  /* .anim-cover-1 {
-    animation: 2s linear infinite alternate anim-trans-1;
-  }
-
-  .anim-cover-2 {
-    animation: 2s linear infinite alternate anim-trans-2;
-  } */
 }
