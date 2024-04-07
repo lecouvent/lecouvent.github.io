@@ -283,7 +283,7 @@
             </svg>
 
             <p class="font-black">Email</p>
-            <p id="mel"></p>
+            <a id="mel"></a>
           </div>
           <div
             class="flex flex-col items-center gap-4 text-center text-gray-200"
@@ -305,24 +305,21 @@
               />
             </svg>
             <p class="font-black">Téléphone</p>
-            <p id="tel"></p>
+            <a id="tel"></a>
           </div>
         </div>
       </footer>
       <script type="text/javascript">
         window.addEventListener("DOMContentLoaded", () => {
-          document.querySelector("#mel").textContent = [
-            "lecouvent58",
-            "@",
-            "gmail.com",
-          ].join("");
-          document.querySelector("#tel").textContent = [
-            "06",
-            "07",
-            "62",
-            "06",
-            "50",
-          ].join(" ");
+          const mel = ["lecouvent58", "@", "gmail.com"].join("");
+          const melLink = document.querySelector("#mel");
+          melLink.textContent = mel;
+          melLink.href = `mailto:${mel}`;
+
+          const phone = ["06", "07", "62", "06", "50"];
+          const phoneLink = document.querySelector("#tel");
+          phoneLink.textContent = phone.join(" ");
+          phoneLink.href = `tel:${phone.join("")}`;
 
           let currentIdx = 0;
           const imgs = [...document.querySelectorAll("#carousel .container")];
