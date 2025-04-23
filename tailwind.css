@@ -3,63 +3,63 @@
 @tailwind utilities;
 
 @layer components {
-  .grid-demo {
-    grid-template-areas: "loctxt" "locpic" "saltxt" "salpic";
-    @media (min-width: 768px) {
-      grid-template-areas: "locpic loctxt" "saltxt salpic";
+    .grid-demo {
+        grid-template-areas: "loctxt" "locpic" "saltxt" "salpic";
+        @media (min-width: 768px) {
+            grid-template-areas: "locpic loctxt" "saltxt salpic";
+        }
     }
-  }
 
-  .bg-loc {
-    grid-area: locpic / loctxt;
-    grid-column-start: locpic;
-  }
+    .bg-loc {
+        grid-area: locpic / loctxt;
+        grid-column-start: locpic;
+    }
 
-  .bg-sal {
-    grid-area: salpic / saltxt;
-    grid-column-end: salpic;
-  }
+    .bg-sal {
+        grid-area: salpic / saltxt;
+        grid-column-end: salpic;
+    }
 
-  .title {
-    font-family: "Noto Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    -webkit-text-stroke: 2px white;
-  }
-
-  .carousel .container {
-    @apply absolute inset-0 w-full max-w-full transition-transform;
-  }
-
-  .carousel .carousel-nav {
-    @apply absolute top-1/2 -translate-y-1/2 bg-green-800 text-white size-10 flex items-center justify-center rounded-full transition-colors hover:bg-green-600;
-  }
-
-  .dots button {
-    @apply size-4 rounded-full bg-green-800;
-  }
-  .dots button.active {
-    @apply bg-green-600;
-  }
-
-  .carousel img {
-    border-radius: 0.5rem;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    object-fit: contain;
-  }
-
-  @media (min-width: 640px) {
     .title {
-      -webkit-text-stroke: 3px white;
+        font-family: "Noto Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+        -webkit-text-stroke: 2px white;
     }
-  }
-  @media (min-width: 1024px) {
-    .title {
-      -webkit-text-stroke: 4px white;
+
+    .carousel .container {
+        @apply absolute inset-0 w-full max-w-full transition-transform;
     }
-  }
+
+    .carousel .carousel-nav {
+        @apply absolute top-1/2 -translate-y-1/2 bg-dark text-white size-10 flex items-center justify-center rounded-full transition-colors hover:bg-dark/80;
+    }
+
+    .dots button {
+        @apply size-4 rounded-full bg-dark;
+    }
+    .dots button.active {
+        @apply bg-white;
+    }
+
+    .carousel img {
+        border-radius: 0.5rem;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    @media (min-width: 640px) {
+        .title {
+            -webkit-text-stroke: 3px white;
+        }
+    }
+    @media (min-width: 1024px) {
+        .title {
+            -webkit-text-stroke: 4px white;
+        }
+    }
 }
