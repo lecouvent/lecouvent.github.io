@@ -9,12 +9,6 @@
         />
         <title>Chez Karo</title>
         <link href="/assets/tailwind.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap"
-            rel="stylesheet"
-        />
     </head>
     <body class="bg-light text-white md:text-black">
         <div class="max-w-[1920px] mx-auto">
@@ -204,6 +198,7 @@
                     id="carousel_prev"
                     type="button"
                     class="carousel-nav left-1"
+                    aria-label="Image précédente"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -223,6 +218,7 @@
                     id="carousel_next"
                     type="button"
                     class="carousel-nav right-1"
+                    aria-label="Image suivante"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -240,13 +236,35 @@
                 </button>
             </div>
             <div class="dots flex justify-center gap-4 mt-4">
-                <button type="button" class="active"></button>
-                <button type="button"></button>
-                <button type="button"></button>
-                <button type="button"></button>
-                <button type="button"></button>
-                <button type="button"></button>
-                <button type="button"></button>
+                <button
+                    type="button"
+                    class="active"
+                    aria-label="Afficher la première image"
+                ></button>
+                <button
+                    type="button"
+                    aria-label="Afficher la deuxième image"
+                ></button>
+                <button
+                    type="button"
+                    aria-label="Afficher la troisième image"
+                ></button>
+                <button
+                    type="button"
+                    aria-label="Afficher la quatrième image"
+                ></button>
+                <button
+                    type="button"
+                    aria-label="Afficher la cinquième image"
+                ></button>
+                <button
+                    type="button"
+                    aria-label="Afficher la sixième image"
+                ></button>
+                <button
+                    type="button"
+                    aria-label="Afficher la septième image"
+                ></button>
             </div>
 
             <section

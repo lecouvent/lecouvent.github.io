@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "css": "tailwindcss -i ./tailwind.css -o ./assets/tailwind.css --watch",
-    "css:build": "tailwindcss -i ./tailwind.css -o ./assets/tailwind.css",
+    "css:build": "tailwindcss -i ./tailwind.css -o ./assets/tailwind.css --minify",
     "dev": "live-server"
   },
   "author": "",
